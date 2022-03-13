@@ -1,0 +1,6 @@
+def seguir():
+  continua = str(input("Quieres jugar de nuevo, si o no? "))
+  if continua == "si":
+    print("Bueno, dame un número del 1 al 10")
+    juego()
+    seguir()
