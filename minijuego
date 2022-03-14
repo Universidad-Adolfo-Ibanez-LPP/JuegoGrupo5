@@ -1,3 +1,19 @@
+import sys
+
+def menu():
+    print("----------------------------------")
+    print("Bienvenido al minijuego de adivinar el número")
+    print("Tienes que adivinar un número del 1 al 10, en solo 3 intentos!!!")
+    respuesta = str(input("Estas listo/a, si o no?: "))
+    while respuesta != "si" and respuesta != "no":
+        print("Tienes que escoger entre si o no")
+        respuesta = str(input("Estas listo/a, si o no?: "))
+    if respuesta == "si":
+        print("---------------------------------")
+    if respuesta == "no":
+        print("Vuelve cuando quieras jugar!")
+        sys.exit()
+
 def nombre():
     name = str(input("Cuál es tu nombre?: "))
     print(f"Bueno {name}, dame un número del 1 al 10")
@@ -11,4 +27,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-    
