@@ -13,3 +13,17 @@ def menu():
     if respuesta == "no":
         print("Vuelve cuando quieras jugar!")
         sys.exit()
+
+def nombre():
+    name = str(input("Cuál es tu nombre?: "))
+    print(f"Bueno {name}, dame un número del 1 al 10")
+
+def main():
+    menu()
+    nombre()
+    juego()
+    seguir()
+
+
+if __name__ == "__main__":
+    main()
