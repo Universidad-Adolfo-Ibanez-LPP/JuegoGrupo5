@@ -1,5 +1,30 @@
 import sys
+import random
 
+def juego():
+    n = random.randint(1,10)
+    numero = int(input("Número: "))
+    while numero < 1 and numero > 10:
+        print("Respuesta inválida")
+        numero = int(input("Número entre 1 al 10: "))
+    i = 1
+    while i <= 3:
+        if n == numero:
+            print(f"Felicidades acertaste en {i} intentos!!")
+            break
+        if numero != n:
+            if i == 3:
+                print("Perdiste")
+                print(f"El número era {n}")
+                break            
+            if numero > n:
+                print("Intenta con un número más bajo")
+                numero = int(input("Número: ")) 
+            if numero < n:
+                print("Intenta con un número más alto")
+                numero = int(input("Número: ")) 
+        i += 1
+        
 def seguir():
   continua = str(input("Quieres jugar de nuevo, si o no? "))
   if continua == "si":
@@ -34,3 +59,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+
